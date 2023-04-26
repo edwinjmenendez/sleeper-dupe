@@ -1,0 +1,17 @@
+# Directories
+node_modules/
+build/
+dist/
+
+# Files
+.env
+*.log
+.DS_Store
+
+# Editor files
+.idea/
+.vscode/
+
+# Build artifacts
+*.dockerfile
+*.jar
