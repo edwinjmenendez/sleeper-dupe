@@ -1,0 +1,14 @@
+
+.container {
+    display: flex;
+    font-size: 32px;
+    font-family: 'Bitter', serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(210, 166, 134);
+  }
