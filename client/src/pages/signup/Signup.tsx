@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { FormControl } from '../../components/FormControl/FormControl';
 // import { FormField } from '../../components/formField/FormField'
@@ -8,25 +8,34 @@ export const Signup = () => {
 
   const signupFields = [
     {
+      name: 'username',
       label: 'Username',
       inputType: 'text',
       placeholder: 'Enter new username'
     },
     {
-      label: 'Email or phone',
+      name: 'email',
+      label: 'Email',
       inputType: 'text',
-      placeholder: 'Enter email or phone number'
+      placeholder: 'Enter email'
     },
     {
+      name: 'password',
       label: 'Password',
       inputType: 'password',
       placeholder: 'Set a password'
     }
   ];
 
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    password: ''
+  })
+
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log('clicked button in signup')
+    console.log('clicked button in signup, data:', formData);
   }
 
   return (
@@ -41,6 +50,9 @@ export const Signup = () => {
           <Link to="/login" className={styles.link}>
             Login
           </Link>}
+        // setUserName={setUsername}
+        formData={formData}
+        setFormData={setFormData}
       />
     </div>
   )
